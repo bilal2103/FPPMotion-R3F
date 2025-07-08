@@ -3,14 +3,7 @@ import { useFrame, useLoader, useThree } from '@react-three/fiber'
 import * as THREE from "three";
 import FBXLoader from "../loaders/fbxLoader";
 
-function Plane(){
-    return (
-        <mesh rotation={[-Math.PI/2, 0, 0]}>
-            <boxGeometry args={[2, 4, 0.01]} />
-            <meshStandardMaterial color="gray" />
-        </mesh>
-    )
-}
+
 
 export default function Movement() {
     const velocity = 0.1;
@@ -132,7 +125,6 @@ export default function Movement() {
     return (
         <>
         <primitive object={fbxModel} position={[0, -2, 0]} rotation={[0, Math.PI/2, 0]} />
-        <Plane />
         </>
     )
 }
